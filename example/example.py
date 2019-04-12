@@ -9,9 +9,9 @@ from functions import *
 
 # Parameters
 nValues = 5    # Number of brightness values
-nTrials = 10     # Determine the number of trials
-stimulus_duration = 20.
-N = 50
+nTrials = 50     # Determine the number of trials
+stimulus_duration = 10.
+N = 100
 dt = 0.1
 SimT = nTrials*nValues*stimulus_duration
 
@@ -24,6 +24,7 @@ stimulus_order = np.random.permutation(nTrials*nValues)
 # Create a range from 0-9 with 20 instances each (easier using modulus)
 stimulus_order = stimulus_order % nValues
 
+##
 x = np.array([(brightness[n]/100.)+.1 for n in stimulus_order])
 times = np.arange(dt, (nTrials*nValues*stimulus_duration), stimulus_duration)
 
@@ -70,6 +71,9 @@ signal = np.zeros_like(time_vector)
 for tt in range(len(times)-1):
 	signal[int(times[tt]/dt):int(times[tt+1]/dt)] = x[tt]
 
+
+#############################################################################
+
 state_matrix = filter_spikes(spike_times, neuron_ids, N, 0., SimT, 0.1, 30.)
 Gamma = np.zeros((N, N))
 Ups = np.zeros(N)
@@ -94,4 +98,16 @@ decoded_x = np.dot(state_matrix.transpose(), decoder)
 ax12.plot(decoded_x)
 
 print('MSE:', np.mean((signal-decoded_x)**2))
+capacity = 1. - (np.mean((signal - decoded_x) ** 2) / np.var(signal))
+print("Capacity: {0}".format(str(capacity)))
+
+# memory curve
+capacities = []
+for time_lag in range(20):
+	target_signal = signal[:-time_lag]
+	states = state_matrix[:, time_lag:]
+
+	c, error, norm = compute_capacity(states, target_signal)
+	capacities.append(c)
+
 pl.show()

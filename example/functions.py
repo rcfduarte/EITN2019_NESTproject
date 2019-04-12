@@ -1,36 +1,7 @@
 import sys
+import time
 import numpy as np
-
-try:
-    import tty, termios
-except ImportError:
-    try:
-        import msvcrt
-    except ImportError:
-        raise ImportError('getch not available')
-    else:
-        getch = msvcrt.getch
-else:
-    def getch():
-        """
-        getch() -> key character
-
-        Read a single keypress from stdin and return the resulting character.
-        Nothing is echoed to the console. This call will block if a keypress
-        is not already available, but will not wait for Enter to be pressed.
-
-        If the pressed key was a modifier key, nothing will be detected; if
-        it were a special function key, it may return the first character of
-        of an escape sequence, leaving additional characters in the buffer.
-        """
-        fd = sys.stdin.fileno()
-        old_settings = termios.tcgetattr(fd)
-        try:
-            tty.setraw(fd)
-            ch = sys.stdin.read(1)
-        finally:
-            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
-        return ch
+from sklearn.linear_model import LinearRegression
 
 
 #######################################################################################
@@ -113,3 +84,28 @@ def spikes_to_states(spike_times, t_start, t_stop, dt, tau):
 				States[i] = state
 
 	return States
+
+
+def compute_capacity(x, z):
+	"""
+	Compute capacity to reconstruct z based on linearly combining x
+	:param x: state matrix (NxT)
+	:param z: target output (1xT)
+	:return: capacity
+	"""
+	# explicit method 1
+	# W_out = np.dot(np.linalg.pinv(x.T), z.T)
+	# z_hat = np.dot(W_out, x)
+	# print time.time()
+	t_start = time.time()
+	reg = LinearRegression(n_jobs=-1, fit_intercept=False, normalize=True, copy_X=False).fit(x.T, z)
+	W_out = reg.coef_
+	z_hat = np.dot(W_out, x)
+	print "\nElapsed time: ", time.time() - t_start
+	# pl.plot(z, 'r')
+	# pl.plot(z_hat, 'g')
+	# pl.show()
+
+	capacity = 1. - (np.mean((z - z_hat) ** 2) / np.var(z))
+	error = np.mean((z - z_hat) ** 2)
+	return capacity, error, np.linalg.norm(W_out)
