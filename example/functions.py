@@ -108,4 +108,4 @@ def compute_capacity(x, z):
 
 	capacity = 1. - (np.mean((z - z_hat) ** 2) / np.var(z))
 	error = np.mean((z - z_hat) ** 2)
-	return capacity, error, np.linalg.norm(W_out)
+	return z_hat, capacity, error, np.linalg.norm(W_out)
