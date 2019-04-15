@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7993865-f433-486a-b1c5-a237b22716d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/example/speedup_tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/example/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.ipynb_checkpoints/complete_example-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/example/.ipynb_checkpoints/complete_example-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/complete_example.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/example/complete_example.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/example.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1640">
-              <caret line="85" selection-start-line="81" selection-end-line="87" selection-end-column="35" />
+            <state relative-caret-position="547">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="e#22#33#0" expanded="true" />
               </folding>
@@ -25,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+            <state relative-caret-position="767">
+              <caret line="110" column="56" lean-forward="true" selection-start-line="88" selection-end-line="110" selection-end-column="56" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -37,7 +39,26 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/example/speedup_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="155" column="18" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,13 +68,14 @@
       <list>
         <option value="$PROJECT_DIR$/example/example.py" />
         <option value="$PROJECT_DIR$/example/functions.py" />
+        <option value="$PROJECT_DIR$/example/speedup_tests.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="982" />
     <option name="y" value="27" />
-    <option name="width" value="928" />
+    <option name="width" value="938" />
     <option name="height" value="1020" />
   </component>
   <component name="ProjectView">
@@ -61,6 +83,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -77,7 +100,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -110,10 +132,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="982" y="27" width="928" height="1020" extended-state="4" />
-    <editor active="true" />
+    <frame x="982" y="27" width="938" height="1020" extended-state="4" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10165746" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.06838565" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -124,12 +145,12 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.5133877" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="9" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Terminal" order="3" weight="0.82735425" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -138,8 +159,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example/example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1640">
-          <caret line="85" selection-start-line="81" selection-end-line="87" selection-end-column="35" />
+        <state relative-caret-position="547">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="e#22#33#0" expanded="true" />
           </folding>
@@ -148,10 +169,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example/functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        <state relative-caret-position="767">
+          <caret line="110" column="56" lean-forward="true" selection-start-line="88" selection-end-line="110" selection-end-column="56" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/speedup_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="155" column="18" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
