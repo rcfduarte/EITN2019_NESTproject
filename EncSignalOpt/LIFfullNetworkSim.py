@@ -203,7 +203,7 @@ for idx, lag in zip(indices, time_lags):
     encoder_capacity.append(enc_capacity)
     circuit_capacity.append(circ_capacity)
 
-    with open ("resultsFullLIF.csv","a") as results_file:
+    with open (project_path+"resultsFullLIF.csv","a") as results_file:
         results_file.write("{0},{1},{2},{3},{4}\n".format(
             str(lag), str(enc_capacity),str(enc_error), str(circ_capacity), str(circ_error)))
     results_file.close()
