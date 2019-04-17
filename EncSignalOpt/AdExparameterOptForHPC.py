@@ -104,7 +104,7 @@ enc_states = np.zeros((nEnc, int(T*duration/dt)))
 for idx, i in enumerate(enc_indices):
     enc_states[idx, :] = enc_activity['V_m'][np.where(enc_activity['senders']==i)[0]]
 
-max_lag = 30.   # [ms] in this example
+max_lag = 110.   # [ms] in this example
 step_lag = 10.   # [ms] - if != dt (index the time axis)
 time_lags = np.arange(0., max_lag, step_lag)
 indices = [np.where(idx==time_vector)[0][0] for idx in time_lags]
