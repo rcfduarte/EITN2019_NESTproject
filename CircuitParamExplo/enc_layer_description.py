@@ -14,7 +14,7 @@ def enc_layer_description(enc_layer):
     ax11.set_xlabel('Voltage')
     ax12.set_xlabel('Voltage')
     ax11.set_ylabel('# of neuron')
-    pl.show()
+    #pl.show()
     
     
 def plt_thresh_Vm0(thresholds, Vm0):
@@ -31,5 +31,5 @@ def plt_thresh_Vm0(thresholds, Vm0):
     ax11.set_xlabel('Voltage')
     ax12.set_xlabel('Voltage')
     ax11.set_ylabel('# of neuron')
-    pl.show()
+    #pl.show()
     return fig
